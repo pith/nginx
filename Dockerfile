@@ -1,7 +1,7 @@
 #
 # Nginx Dockerfile
 #
-# https://github.com/dockerfile/nginx
+# https://github.com/pith/nginx
 #
 
 # Pull base image.
@@ -15,7 +15,9 @@ RUN apt-get install -y nginx
 RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
 
 # Attach volumes.
+VOLUME /etc/nginx/sites-available
 VOLUME /etc/nginx/sites-enabled
+VOLUME /var/wwww
 VOLUME /var/log/nginx
 
 # Set working directory.
