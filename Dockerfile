@@ -24,7 +24,7 @@ VOLUME /var/log/nginx
 WORKDIR /etc/nginx
 
 # Expose ports.
-EXPOSE 80
+EXPOSE 80 443
 
 # Define default command.
 ENTRYPOINT ["nginx"]
